@@ -13,6 +13,10 @@ section{
     place-items: center;
     align-content: center;
     min-height: 100vh;
+    background-color: gray;
+    border-radius: 1rem;
+    margin: 10%;
+
 }
 
 h2{
