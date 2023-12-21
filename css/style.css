@@ -1,69 +1,112 @@
-@import url('https://fonts.googleapis.com/css2?family=poppins:wght@200;400;700&display=swap');
-body{
-    background-color: #131316;
-    color: #ffffff;
-    font-family: 'poppins', sans-serif;
-    padding: 0;
+* {
     margin: 0;
-
+    padding: 0;
 }
 
-section{
-    display: grid;
-    place-items: center;
-    align-content: center;
-    min-height: 85vh;
-    margin: 15%;
-    border-radius: 1rem;
-    background-color: gray;
+body {
+    font-size: 4em;
+    color: white;
 }
 
-h2{
-    font-size: 3rem;
+.parallax_wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 300px;
 }
 
-.hidden{
+.parallax_wrapper .intro_screen,
+.parallax_wrapper .outro_screen,
+.parallax_wrapper .middle_screen {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.title {
+    margin-top: 20vh;
+}
+
+.hidden {
+    display: none;
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
-    transition: all 2s;
+    transition: all 1.5s;
+    
+}
 
+.mid:nth-child(2){
+    transition-delay: 200ms;
+}
+
+.mid:nth-child(3){
+    transition-delay: 400ms;
 }
 
 .show{
+    display: flex;
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
-
 }
 
-.navs{
+
+
+.parallax_wrapper .intro_screen {
+    background-color: tomato;
+}
+
+.parallax_wrapper .outro_screen {
+    background-color: teal;
+}
+
+.parallax_wrapper .parallax_group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+}
+
+.parallax_wrapper .parallax_group .parallax_layer {
+    position: absolute;
+    inset: 0;
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.nav:nth-child(2){
-    transition-delay: 200ms;
-
-}
-.nav:nth-child(3){
-    transition-delay: 400ms;
-    
-}
-.nav:nth-child(4){
-    transition-delay: 600ms;
-    
-}
-.nav{
-    background-color: gray;
-    border-radius: 30px;
-    padding: 1rem;
-    margin: 0 0.5rem;
-    height: 200px;
-    width: 200px;
+.parallax_wrapper .parallax_group .base_layer {
+    transform: translateZ(-300px) scale(2);
 }
 
-@media(prefers-reduced-motion){
-    .hidden{
-        transition: none;
-    }
+#intro {
+    z-index: 0;
+}
+
+#group-1 {
+    z-index: -1;
+}
+
+#group-3 {
+    z-index: -1;
+}
+
+#group-3>.base_layer {
+    background-color: blueviolet;
+    z-index: -1;
+}
+
+#group-1>.base_layer {
+    background-color: crimson;
+}
+
+#middle>.mid_layer {
+    background-color: yellowgreen;
+    z-index: 0;
+}
+
+#outro {
+    z-index: 0;
+    /* You may adjust the z-index as needed */
 }
