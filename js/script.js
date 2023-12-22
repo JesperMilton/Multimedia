@@ -1,14 +1,20 @@
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        console.log(entry);
-        if (entry.isIntersecting){
-            entry.target.classList.add('show');
-        }else{
-            entry.target.classList.remove('show')
-        }
+function init() {
+    document.getElementById("nav-1").addEventListener("click", function () {
+        changeBack("red"); // Ändra färgen här, till exempel "red"
     });
-});
+    document.getElementById("nav-2").addEventListener("click", function () {
+        changeBack("green"); // Ändra färgen här, till exempel "green"
+    });
+    document.getElementById("nav-3").addEventListener("click", function () {
+        changeBack("blue"); // Ändra färgen här, till exempel "blue"
+    });
+    console.log("hej");
+}
+window.addEventListener("load", init);
 
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((el) => observer.observe(el));
+function changeBack(color) {
+    document.getElementById("middle").style.backgroundColor = color;
+}
+
+
 
