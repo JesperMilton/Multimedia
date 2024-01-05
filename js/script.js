@@ -1,20 +1,35 @@
+let bakG;
+let b1;
+let b2;
+let b3;
+
 function init() {
-    document.getElementById("nav-1").addEventListener("click", function () {
-        changeBack("red"); // Ändra färgen här, till exempel "red"
+    bakG = document.querySelector("#middle .mid_layer")
+
+    b1 = document.getElementById("nav-1");
+    b1.addEventListener("click", function () {
+        changeBack("blue");
     });
-    document.getElementById("nav-2").addEventListener("click", function () {
-        changeBack("green"); // Ändra färgen här, till exempel "green"
+
+    b2 = document.getElementById("nav-2");
+    b2.addEventListener("click", function () {
+        changeBack("red");
     });
-    document.getElementById("nav-3").addEventListener("click", function () {
-        changeBack("blue"); // Ändra färgen här, till exempel "blue"
+
+    b3 = document.getElementById("nav-3");
+    b3.addEventListener("click", function () {
+        changeBack("yellow");
     });
-    console.log("hej");
 }
+
 window.addEventListener("load", init);
 
 function changeBack(color) {
-    document.getElementById("middle").style.backgroundColor = color;
+    bakG.style.transition = "background-color 1s ease";
+    bakG.style.backgroundColor = color;
+
+    setTimeout(function() {
+        bakG.style.transition = "";
+    }, 500);
 }
-
-
 
