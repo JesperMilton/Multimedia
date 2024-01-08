@@ -6,6 +6,7 @@
 body {
     font-size: 4em;
     color: white;
+    scroll-behavior: smooth;
 }
 
 .parallax_wrapper {
@@ -30,7 +31,7 @@ body {
 }
 
 .text{
-    font-size: 3rem;
+    font-size: 2rem;
     position: absolute;
     margin-top: 30vh;
     text-align: center;
@@ -60,7 +61,13 @@ body {
 
 
 .parallax_wrapper .intro_screen {
-    background-color: tomato;
+    
+
+    background-image: url('../img/Berg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
 }
 
 .parallax_wrapper .outro_screen {
@@ -86,10 +93,12 @@ body {
 
 .parallax_wrapper .parallax_group .base_layer {
     transform: translateZ(-300px) scale(2);
+    overflow: hidden;
 }
 
 #intro {
     z-index: 0;
+    
 }
 
 #group-1 {
@@ -101,7 +110,11 @@ body {
 }
 
 #group-3>.base_layer {
-    background-color: blueviolet;
+    background-image: url('../img/Skog-2.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
     z-index: -1;
 }
 
@@ -116,5 +129,10 @@ body {
 
 #outro {
     z-index: 0;
-    /* You may adjust the z-index as needed */
+    background-image: url('../img/Skog.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    
 }
