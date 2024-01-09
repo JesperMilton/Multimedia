@@ -58,6 +58,11 @@ body {
     cursor: pointer;
 }
 
+#textChange {
+    text-align: center;
+    margin-left: -15vh;
+}
+
 
 
 .parallax_wrapper .intro_screen {
@@ -110,7 +115,7 @@ body {
 }
 
 #group-3>.base_layer {
-    background-image: url('../img/Skog-2.svg');
+    background-image: url('../img/Tent.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
