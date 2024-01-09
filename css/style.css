@@ -66,8 +66,6 @@ body {
 
 
 .parallax_wrapper .intro_screen {
-    
-
     background-image: url('../img/Berg.svg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -128,7 +126,12 @@ body {
 }
 
 #middle>.mid_layer {
-    background-color: yellowgreen;
+    background-image: url('../img/Skog-3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+
     z-index: 0;
 }
 
