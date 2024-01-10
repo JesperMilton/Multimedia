@@ -46,7 +46,7 @@ body {
 }
 
 .li {
-    background-color: gray;
+    background-color: darkolivegreen;
     border-radius: 30px;
     padding: 1rem;
     margin: 0 0.5rem;
@@ -66,11 +66,12 @@ body {
 
 
 .parallax_wrapper .intro_screen {
-    background-image: url('../img/Berg.svg');
+    background-image: url('../img/Forrest.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     overflow: hidden;
+    
 }
 
 .parallax_wrapper .outro_screen {
@@ -113,7 +114,7 @@ body {
 }
 
 #group-3>.base_layer {
-    background-image: url('../img/Tent.svg');
+    background-image: url('../img/5.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -122,7 +123,12 @@ body {
 }
 
 #group-1>.base_layer {
-    background-color: crimson;
+    
+    background-image: url('../img/Berg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
 }
 
 #middle>.mid_layer {
@@ -137,10 +143,11 @@ body {
 
 #outro {
     z-index: 0;
-    background-image: url('../img/Skog.svg');
+    background-image: url('../img/Sunset.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     overflow: hidden;
     
 }
+
